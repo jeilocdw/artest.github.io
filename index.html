@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Model Viewer AR - VR</title>
+  <meta name="description" content="Model Viewer (VR / AR) • A-Frame">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <script src="aframe.min.js"></script>
+  <script src="info-message.js"></script>
+  <script src="aframe-extras.min.js"></script>
+  <script src="hide-on-enter-ar.js"></script>
+  <script src="ar-shadows.js"></script>
+  <script src="ar-hit-test.js"></script>
+  <script src="model-viewer.js"></script>
+  <script src="background-gradient.js"></script>
+</head>
+<body>
+
+<a-scene
+  renderer="colorManagement: true;"
+  info-message="htmlSrc: #messageText"
+  model-viewer="gltfModel: #che; title: shirt">
+  <a-assets>
+    <!--
+      Model source: assets\shirt\scene.gltf
+      Model author: hwg
+      Model license: ccu
+    -->
+    <a-asset-item id="shirt"
+      src="assets\shirt\scene.gltf"
+      response-type="arraybuffer" crossorigin="anonymous"></a-asset-item>
+  </a-assets>
+</a-scene>
+</body>
+</html>
